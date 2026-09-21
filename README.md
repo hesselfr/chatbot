@@ -1,19 +1,39 @@
-# 💬 Chatbot template
+# Flowfield
 
-A simple Streamlit app that shows how to build a chatbot using OpenAI's GPT-3.5.
+Marketing website for **Flowfield** — AI engineers embedded in your business.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chatbot-template.streamlit.app/)
+Flowfield places technical AI engineers inside Dutch SME and mid-market
+companies. They work alongside employees, find repetitive operational work,
+and build the automation directly into the software the company already
+uses.
 
-### How to run it on your own machine
+## Stack
 
-1. Install the requirements
+- [Next.js](https://nextjs.org) (App Router) + React + TypeScript
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [Motion](https://motion.dev) for subtle scroll and workflow animations
+- [Lucide](https://lucide.dev) icons
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## Getting started
 
-2. Run the app
+```bash
+npm install
+npm run dev
+```
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+Open [http://localhost:3000](http://localhost:3000).
+
+## Scripts
+
+- `npm run dev` — start the development server
+- `npm run build` — production build
+- `npm run start` — run the production build
+- `npm run lint` — lint the project
+
+## Structure
+
+- `app/` — routes, layout, metadata, global styles
+- `components/layout/` — navigation and footer
+- `components/sections/` — homepage sections
+- `components/ui/` — shared primitives and diagrams
+- `lib/` — small utilities
