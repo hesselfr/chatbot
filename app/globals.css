@@ -11,9 +11,12 @@
   --color-ink-faint: #8a877c;
   --color-line: #ddd8cc;
   --color-line-strong: #c7c1b1;
-  --color-accent: #12594a;
-  --color-accent-bright: #1c7d67;
-  --color-accent-soft: #e4ece7;
+  --color-accent: #0e6b56;
+  --color-accent-bright: #1fae8c;
+  --color-accent-soft: #e0f0ea;
+  --color-accent-secondary: #b25a24;
+  --color-accent-secondary-bright: #dc8442;
+  --color-accent-secondary-soft: #f6e7d9;
   --color-dark: #0e0d09;
   --color-dark-soft: #1a1912;
   --color-dark-line: #35331f;
