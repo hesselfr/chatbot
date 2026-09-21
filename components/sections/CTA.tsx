@@ -12,6 +12,10 @@ export function CTA() {
         className="pointer-events-none absolute -top-40 right-[-10%] size-[520px] rounded-full bg-accent/20 blur-[140px]"
         aria-hidden
       />
+      <div
+        className="pointer-events-none absolute -bottom-32 left-[-6%] size-[420px] rounded-full bg-accent-secondary/15 blur-[130px]"
+        aria-hidden
+      />
 
       <Container className="relative">
         <div className="max-w-3xl">

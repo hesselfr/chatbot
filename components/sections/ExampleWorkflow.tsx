@@ -95,6 +95,7 @@ export function ExampleWorkflow() {
               {steps.map((s, i) => {
                 const Icon = s.icon;
                 const isActive = i === active;
+                const isHuman = s.actor === "human";
                 return (
                   <li key={s.label} className="contents">
                     <button
@@ -112,14 +113,20 @@ export function ExampleWorkflow() {
                         className={cn(
                           "flex size-9 items-center justify-center rounded-full border",
                           isActive
-                            ? "border-accent-bright bg-accent/20"
+                            ? isHuman
+                              ? "border-accent-secondary-bright bg-accent-secondary/20"
+                              : "border-accent-bright bg-accent/20"
                             : "border-line-strong bg-paper"
                         )}
                       >
                         <Icon
                           className={cn(
                             "size-4",
-                            isActive ? "text-accent-bright" : "text-ink-soft"
+                            isActive
+                              ? isHuman
+                                ? "text-accent-secondary-bright"
+                                : "text-accent-bright"
+                              : "text-ink-soft"
                           )}
                           strokeWidth={1.75}
                         />
@@ -151,7 +158,7 @@ export function ExampleWorkflow() {
                 className={cn(
                   "mt-0.5 shrink-0 rounded-full px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-[0.1em]",
                   step.actor === "human"
-                    ? "bg-accent-soft text-accent"
+                    ? "bg-accent-secondary-soft text-accent-secondary"
                     : "bg-ink text-paper"
                 )}
               >

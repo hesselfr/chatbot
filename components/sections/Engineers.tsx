@@ -23,6 +23,29 @@ const support = [
   "Security- en kwaliteitscontroles",
 ];
 
+const selection = [
+  {
+    n: "01",
+    title: "Technische screening",
+    body: "Beoordeling op programmeervaardigheid, systeemdenken en probleemoplossend vermogen.",
+  },
+  {
+    n: "02",
+    title: "Praktijkcase",
+    body: "Een realistische automatiseringscase, beoordeeld door een senior engineer van Flowfield.",
+  },
+  {
+    n: "03",
+    title: "Onboarding",
+    body: "Training in workflow-analyse, integraties, security en het Flowfield-playbook.",
+  },
+  {
+    n: "04",
+    title: "Meelopen met een senior",
+    body: "De eerste klantopdrachten altijd samen met een ervaren engineer, niet alleen.",
+  },
+];
+
 export function Engineers() {
   return (
     <section id="engineers" className="border-t border-line py-24 md:py-32">
@@ -39,6 +62,11 @@ export function Engineers() {
                 Science, AI en software engineering. Ze worden specifiek
                 opgeleid om processen te doorgronden en te automatiseren —
                 niet om alleen te adviseren.
+              </p>
+              <p className="mt-4 max-w-[30rem] text-pretty text-[16px] leading-[1.65] text-ink-soft">
+                Voordat een engineer alleen bij een klant werkt, heeft hij of
+                zij minstens één praktijkcase en een periode meelopen met een
+                senior engineer achter de rug.
               </p>
             </Reveal>
 
@@ -83,6 +111,41 @@ export function Engineers() {
           <Reveal delay={0.1} className="flex items-center">
             <EngineerNetwork />
           </Reveal>
+        </div>
+
+        <div className="mt-20 border-t border-line pt-16 md:mt-24 md:pt-20">
+          <Reveal>
+            <p className="text-[14.5px] font-medium uppercase tracking-[0.08em] text-ink-faint">
+              Van kandidaat tot Flowfield Engineer
+            </p>
+          </Reveal>
+
+          <div className="relative mt-10">
+            <div
+              className="absolute left-0 right-0 top-[13px] hidden h-px bg-line-strong md:block"
+              aria-hidden
+            />
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-8">
+              {selection.map((step, i) => (
+                <Reveal key={step.n} delay={i * 0.06}>
+                  <div className="relative">
+                    <div className="relative z-10 mb-6 flex size-[27px] items-center justify-center rounded-full border border-ink bg-paper">
+                      <span className="size-1.5 rounded-full bg-accent-secondary" />
+                    </div>
+                    <div className="font-mono text-[12px] tracking-[0.1em] text-ink-faint">
+                      {step.n}
+                    </div>
+                    <h3 className="mt-2 text-[16.5px] font-semibold tracking-[-0.01em] text-ink">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2.5 text-pretty text-[14px] leading-[1.6] text-ink-soft">
+                      {step.body}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </Container>
     </section>
