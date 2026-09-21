@@ -51,7 +51,7 @@ export function StartSmall() {
                   className={cn(
                     "flex shrink-0 items-center gap-2 font-mono text-[11px] uppercase tracking-[0.1em]",
                     p.status === "live" && "text-accent",
-                    p.status === "building" && "text-accent-secondary",
+                    p.status === "building" && "text-ink-soft",
                     p.status === "identified" && "text-ink-faint"
                   )}
                 >
@@ -59,8 +59,7 @@ export function StartSmall() {
                     className={cn(
                       "size-1.5 rounded-full",
                       p.status === "live" && "bg-accent",
-                      p.status === "building" &&
-                        "animate-pulse bg-accent-secondary",
+                      p.status === "building" && "animate-pulse bg-ink-soft",
                       p.status === "identified" &&
                         "border border-ink-faint bg-transparent"
                     )}

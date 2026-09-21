@@ -1,4 +1,4 @@
-const layers = ["Patterns", "Connectors", "Workflows", "Security", "Lessons", "Integrations"];
+const layers = ["Patterns", "Connectors", "Playbooks", "Security", "Best practices", "Integrations"];
 
 export function EngineerNetwork() {
   return (
