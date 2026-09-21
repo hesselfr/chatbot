@@ -13,10 +13,6 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[560px] bg-gradient-to-b from-accent-soft/60 via-transparent to-transparent"
         aria-hidden
       />
-      <div
-        className="pointer-events-none absolute -top-24 right-[-8%] -z-10 size-[420px] rounded-full bg-accent-secondary-soft/70 blur-[110px]"
-        aria-hidden
-      />
 
       <Container>
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
@@ -51,10 +47,6 @@ export function Hero() {
                 Bekijk hoe het werkt
               </Button>
             </div>
-
-            <p className="mt-9 text-[13.5px] text-ink-faint">
-              Voor Nederlandse MKB- en mid-marketbedrijven.
-            </p>
           </div>
 
           <HeroWorkflow />
